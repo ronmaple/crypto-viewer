@@ -1,0 +1,50 @@
+$w: 200px;
+$h: 250px;
+$shadow: 0 0.3125rem 1rem 0 rgba(0,0,0,0.24);
+$rad: 5px;
+$background: white;
+$fontSize: 30px;
+
+.card {
+    height: $h;
+    width: $w;
+    box-shadow: $shadow;
+    border-radius: $rad;
+    background-color: $background;
+}
+
+.card-header {
+
+    padding: 20px;
+
+    span {
+        float: left;
+        clear: left;
+    }
+
+    span.crypto {
+        font-size: $fontSize;
+    }
+
+
+    span.currency {
+        font-size: $fontSize - 15px;
+        color: hsl(0, 0%, 70%);
+    }
+
+}
+
+.card-price {
+    padding: 20px;
+    text-align: center;
+
+    $top: $h * (0.25);
+    margin: $top auto 0px auto;
+
+    span.price {
+        font-size: $fontSize + 5px;
+        font-weight: 500
+    }
+    
+
+}

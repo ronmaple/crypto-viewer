@@ -1,0 +1,48 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "My personal boilerplate for react-projects",
+  "main": "server/server.js",
+  "author": "ronmapue",
+  "license": "MIT",
+  "private": false,
+  "proxy": "http://localhost:8080/api",
+  "scripts": {
+    "build": "webpack",
+    "serve": "live-server public/",
+    "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
+    "start-api": "nodemon api/server.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^1.4.3",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "cors": "^2.8.4",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "live-server": "^1.2.0",
+    "moment": "^2.22.2",
+    "mongoose": "^5.2.6",
+    "node-fetch": "^2.2.0",
+    "node-sass": "^4.9.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.18.3",
+    "webpack-cli": "^3.1.0"
+  },
+  "repository": "https://github.com/ronmaple/react-boilerplate.git"
+}

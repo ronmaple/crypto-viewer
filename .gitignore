@@ -1,0 +1,4 @@
+/node_modules
+yarn.lock
+/api/config/keys.js
+yarn-error.log
