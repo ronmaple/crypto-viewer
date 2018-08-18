@@ -28,7 +28,10 @@ module.exports = (env) => {
         devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
         devServer: {
             contentBase: path.join(__dirname, 'public'),
-            historyApiFallback: true // serve index.html always
+            historyApiFallback: true, // serve index.html always
+            proxy: {
+                '/api': 'http://localhost:8082'
+            }
         }
     }
 }
