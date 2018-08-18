@@ -26,7 +26,7 @@ app.get('*', (req, res) => {
 })
 
 // const port = process.env || 3000;
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8082;
 
 app.listen(port, () => {
     console.log(`api server running on port ${port}`);
