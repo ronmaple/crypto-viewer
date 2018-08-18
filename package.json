@@ -6,9 +6,10 @@
   "author": "ronmapue",
   "license": "MIT",
   "private": false,
-  "proxy": "http://localhost:8080/api",
+  "proxy": "http://localhost:8081/api",
   "scripts": {
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
     "serve": "live-server public/",
     "dev-server": "webpack-dev-server",
     "start": "node server/server.js",
