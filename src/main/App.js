@@ -13,7 +13,7 @@ class App extends Component {
     }
     async componentDidMount() {
         try {
-            let url = 'https://https://cryptoprice-view-rm.herokuapp.com/' ||'http://localhost:8082/api'; 
+            let url = 'https://cryptoprice-view-rm.herokuapp.com/' ||'http://localhost:8082/api'; 
             const res = await fetch(url);
             
             const data = await res.json();
