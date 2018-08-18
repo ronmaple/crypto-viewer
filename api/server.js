@@ -5,7 +5,7 @@ const app = express();
 const path = require('path');
 const publicPath = path.join(__dirname, '..', 'public');
 // cors middle ware for api
-app.use(cors());
+// app.use(cors());
 app.use(express.static(publicPath));
 
 // start database

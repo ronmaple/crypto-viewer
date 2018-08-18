@@ -6,13 +6,11 @@
   "author": "ronmapue",
   "license": "MIT",
   "private": false,
-  "proxy": "http://localhost:8081/api",
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "serve": "live-server public/",
     "dev-server": "webpack-dev-server",
-    "start": "node server/server.js",
     "start-api": "nodemon api/server.js"
   },
   "dependencies": {
@@ -25,9 +23,6 @@
     "css-loader": "^1.0.0",
     "express": "^4.16.3",
     "live-server": "^1.2.0",
-    "moment": "^2.22.2",
-    "mongoose": "^5.2.6",
-    "node-fetch": "^2.2.0",
     "node-sass": "^4.9.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -45,5 +40,6 @@
     "nodemon": "^1.18.3",
     "webpack-cli": "^3.1.0"
   },
-  "repository": "https://github.com/ronmaple/react-boilerplate.git"
+  "repository": "https://github.com/ronmaple/react-boilerplate.git",
+  "proxy": "http://localhost:8082/api"
 }
