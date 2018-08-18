@@ -12,8 +12,7 @@
     "build:prod": "webpack -p --env production",
     "serve": "live-server public/",
     "dev-server": "webpack-dev-server",
-    "start-api": "nodemon server/server.js",
-    "heroku-postbuild": "cd server && npm install && npm run server/server"
+    "start-api": "nodemon server/server.js"
   },
   "dependencies": {
     "@material-ui/core": "^1.4.3",
