@@ -1,5 +1,5 @@
 const moment = require('moment');
-const fetch = require('node-fetch');
+const fetch = require('node-fetch').default;
 
 async function callApi(
     key,
