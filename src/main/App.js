@@ -29,7 +29,11 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Card crypto={this.state.data.crypto} currency={this.state.data.currency} price={this.state.data.rate} />
+                <Card 
+                crypto={this.state.data.crypto} 
+                currency={this.state.data.currency || this.state.data.data} 
+                price={this.state.data.rate}
+                />
             </div>
         )
     }
