@@ -17,7 +17,7 @@ module.exports = (app) => {
             .then(({ time, asset_id_base : crypto, asset_id_quote : currency, rate }) => { 
 
                 Crypto.find({}, (err, data) => {
-
+                    if (err) throw err;
                     let updatedPrice = {
                         id: data.length,
                         time,
@@ -36,7 +36,7 @@ module.exports = (app) => {
                     res.json({
                         crypto,
                         currency,
-                        rate: rate.toFixed(2),
+                        rate,
                         time
                     });
 
