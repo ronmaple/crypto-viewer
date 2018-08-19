@@ -1,5 +1,6 @@
 const Mongoose = require('mongoose');
 const { Schema } = Mongoose;
+Mongoose.Promise = global.Promise 
 
 module.exports = function database() {
     console.log('initializing database');
@@ -17,5 +18,6 @@ module.exports = function database() {
             }
         ]
     })
-     Mongoose.model('Crypto', CryptoSchema);   
+    
+    Mongoose.model('Crypto', CryptoSchema);   
 }

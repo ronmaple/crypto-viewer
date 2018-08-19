@@ -29,4 +29,6 @@ app.get('*', (req, res) => {
 // var port = process.env.PORT || 8082;
 
 // console.log('process.env', process.env)
-app.listen(process.env.PORT || 8082);
+app.listen(process.env.PORT || 8082, () => {
+    console.log('app is running');
+});
