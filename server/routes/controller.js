@@ -32,13 +32,17 @@ module.exports = (app) => {
     
                     let updatedPriceCollection = new Crypto( updatedPrice );
                     updatedPriceCollection.save();
-    
-                    res.json({
-                        crypto,
-                        currency,
-                        rate,
-                        time
-                    } || { data: 'API not sent'} );
+
+                    setTimeout(
+                        () => {
+                            res.json({
+                                crypto,
+                                currency,
+                                rate,
+                                time
+                            } || { data: 'API not sent'} );
+                        }, 5000
+                    )
 
                 })
 

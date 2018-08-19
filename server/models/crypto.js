@@ -3,7 +3,8 @@ const { Schema } = Mongoose;
 
 module.exports = function database() {
     console.log('initializing database');
-    Mongoose.connect(require('../config/keys').mongoURI, { useNewUrlParser: true });
+    // Mongoose.connect(require('../config/keys').mongoURI, { useNewUrlParser: true, useMongoClient: true });
+    Mongoose.connect(require('../config/keys').mongoURI, { useMongoClient: true });
 
     const CryptoSchema = new Schema({
         id: Number,
