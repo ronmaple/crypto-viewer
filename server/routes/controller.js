@@ -38,7 +38,7 @@ module.exports = (app) => {
                         currency,
                         rate,
                         time
-                    });
+                    } || "API not sending");
 
                 })
 
