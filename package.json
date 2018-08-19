@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node server/server.js",
+    "start": "cd server && npm install && node server/server.js",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "serve": "live-server public/",
