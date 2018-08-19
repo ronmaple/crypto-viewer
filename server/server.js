@@ -13,17 +13,17 @@ require('./models/crypto')();
 
 // serve public folder for production
 // if (process.env.NODE_ENV === 'production') {
-//     // app.use(express.static(publicPath))
-//     app.use(express.static('public'));
+//     app.use(express.static(publicPath))
+//     // app.use(express.static('public'));
 // }
 
 // enable routing
 require('./routes/controller')(app);
 
 // fallback for react routing -- not necessarily necessary for this project
-app.get('*', (req, res) => {
-    res.sendFile(path.join(publicPath, 'index.html'));
-})
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(publicPath, 'index.html'));
+// })
 
 // const port = process.env || 3000;
 const port = process.env.PORT || 8082;
