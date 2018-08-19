@@ -5,7 +5,7 @@ const app = express();
 const path = require('path');
 const publicPath = path.join(__dirname, '..', 'public');
 // cors middle ware for api
-// app.use(cors());
+app.use(cors());
 app.use(express.static(publicPath));
 
 // start database
@@ -26,9 +26,7 @@ app.get('*', (req, res) => {
 })
 
 // const port = process.env || 3000;
-var port = process.env.PORT || 8082;
+// var port = process.env.PORT || 8082;
 
-console.log('process.env', process.env)
-app.listen(port, () => {
-    console.log(`api server running on port ${port}`);
-})
+// console.log('process.env', process.env)
+app.listen(process.env.PORT || 8082);
