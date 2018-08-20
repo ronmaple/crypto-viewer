@@ -8,14 +8,15 @@ const publicPath = path.join(__dirname, '..', 'public');
 app.use(cors());
 app.use(express.static(publicPath));
 
-// start database
-require('./models/crypto')();
 
 // serve public folder for production
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(publicPath))
     // app.use(express.static('public'));
 }
+
+// start database
+require('./models/crypto')();
 
 // enable routing
 require('./routes/controller')(app);
@@ -24,9 +25,6 @@ require('./routes/controller')(app);
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 })
-
-// const port = process.env || 3000;
-// var port = process.env.PORT || 8082;
 
 // console.log('process.env', process.env)
 app.listen(process.env.PORT || 8082, () => {

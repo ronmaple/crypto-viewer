@@ -11,7 +11,6 @@ class App extends Component {
     }
     async componentDidMount() {
         try {
-        
             const res = await fetch('/api');
             
             const data = await res.json();
@@ -21,7 +20,7 @@ class App extends Component {
             })
 
         } catch(e) {
-
+            if (e) throw e;
         }
     }
 
