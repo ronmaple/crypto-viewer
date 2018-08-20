@@ -41,7 +41,7 @@ module.exports = (app) => {
                     res.json({
                         crypto,
                         currency,
-                        rate,
+                        rate: rate.toFixed(2),
                         time
                     } || { data: 'API not sent'} );
 
