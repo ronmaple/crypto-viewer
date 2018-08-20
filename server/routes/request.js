@@ -5,7 +5,7 @@ async function callApi(
     key,
     crypto = 'BTC', 
     currency = 'CAD', 
-    time = moment().format(), 
+    time = moment().utc().format(), 
     ) {
     try {
         let query = `https://rest.coinapi.io/v1/exchangerate/${crypto}/${currency}?time=${time}&apikey=${key}`;
@@ -29,4 +29,9 @@ async function callApi(
 }
 
 module.exports = callApi;
+
+// 2018-08-20T02:17:02-07:00
+
+// 2018-08-20T09:18:34+00:00
+
 
