@@ -10,6 +10,7 @@ async function callApi(
     try {
         let query = `https://rest.coinapi.io/v1/exchangerate/${crypto}/${currency}?time=${time}&apikey=${key}`;
         console.log(query);
+        console.log('time:', time);
         let data = await fetch(query);
         // return {
         //     time: '2018-08-20T09:03:23.7913197Z',
