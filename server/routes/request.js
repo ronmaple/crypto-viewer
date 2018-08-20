@@ -10,15 +10,17 @@ async function callApi(
     try {
         let query = `https://rest.coinapi.io/v1/exchangerate/${crypto}/${currency}?time=${time}&apikey=${key}`;
         console.log(query);
-        // let data = await fetch(query);
+        let data = await fetch(query);
 
-        return {
-            time: '2018-08-20T09:03:23.7913197Z',
-            asset_id_base: 'BTC',
-            asset_id_quote: 'CAD',
-            rate: 8796
-        }
-        // return await data.json();
+        // return {
+        //     time: '2018-08-20T09:03:23.7913197Z',
+        //     asset_id_base: 'BTC',
+        //     asset_id_quote: 'CAD',
+        //     rate: 8796
+        // }
+        let json = await data.json();
+
+        return json;
 
     } catch(e) {
         console.log('callApi error:', e);
