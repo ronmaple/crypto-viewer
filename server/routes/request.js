@@ -11,7 +11,6 @@ async function callApi(
         let query = `https://rest.coinapi.io/v1/exchangerate/${crypto}/${currency}?time=${time}&apikey=${key}`;
         console.log(query);
         let data = await fetch(query);
-
         // return {
         //     time: '2018-08-20T09:03:23.7913197Z',
         //     asset_id_base: 'BTC',
@@ -19,6 +18,7 @@ async function callApi(
         //     rate: 8796
         // }
         let json = await data.json();
+        console.log('data.json in callApi', json);
 
         return json;
 
