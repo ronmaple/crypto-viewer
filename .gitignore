@@ -3,3 +3,4 @@ yarn.lock
 /api/config/keys.js
 yarn-error.log
 server/node_modules
+server/config/keys.js

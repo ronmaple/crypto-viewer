@@ -12,12 +12,6 @@ async function callApi(
         console.log(query);
         console.log('time:', time);
         let data = await fetch(query);
-        // return {
-        //     time: '2018-08-20T09:03:23.7913197Z',
-        //     asset_id_base: 'BTC',
-        //     asset_id_quote: 'CAD',
-        //     rate: 8796
-        // }
         let json = await data.json();
         console.log('data.json in callApi', json);
 
@@ -29,9 +23,5 @@ async function callApi(
 }
 
 module.exports = callApi;
-
-// 2018-08-20T02:17:02-07:00
-
-// 2018-08-20T09:18:34+00:00
 
 
